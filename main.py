@@ -31,19 +31,17 @@ def compare_words(w1, w2, positions, wrong_positions, wrong_letters):
     return True
 
 def main():
-    #with open("words5.txt", "r") as f:
-    #    words = f.read()
 
     freqs = get_frequencies()
     words = freqs.keys()
     print("Indexed {} words".format(len(words)))
 
-    #correct_letters = input("Correct letters, wrong position: (A12 B23 C15 ..): ").upper()
-    #correct_positions = input("Correct positions: (..AB.): ").upper()
-    #wrong_letters = input("Wrong letters: (A B ...): ").upper()
-    correct_letters = ""
-    correct_positions = ".OUSE"
-    wrong_letters = "R A I H M"
+    correct_letters = input("Correct letters, wrong position: (A12 B23 C15 ..): ").upper()
+    correct_positions = input("Correct positions: (..AB.): ").upper()
+    wrong_letters = input("Wrong letters: (A B ...): ").upper()
+    #correct_letters = ""
+    #correct_positions = "....."
+    #wrong_letters = ""
 
     if len(correct_positions) != 5:
         print("Wrong length!")
